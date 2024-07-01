@@ -1,11 +1,10 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
-    python3.10 \
-    python3-pip \
+    python3.12 \
+    python3-pipx \
     git
 
-RUN pip install pipx
 RUN pipx install PyYAML
 
 COPY feed.py /usr/bin/feed.py
